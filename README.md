@@ -24,11 +24,11 @@ yarn
 ```
 3. Inicie o servidor HTTP.
 ```bash
-npm run start
+npm run dev
 ```
 ou 
 ```bash
-yarn start
+yarn dev
 ```
 
 ## Endpoints
@@ -36,3 +36,31 @@ yarn start
 ### GET /produtos?name='product name'
 É o único endpoint da api, ele retorna um array de produtos, contendo nome, preço e links para o produto.
 
+**Examplo de requisição com sucesso**
+```json
+[
+
+    {
+        "name": "Arquitetura limpa: o guia do artesão para estrutura e design de software",
+        "price": "R$ 77,13",
+        "link": "https://www.amazon.com.br/Arquitetura-Limpa-Artes%C3%A3o-Estrutura-Software/dp/8550804606/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1PWHUQSSKSZFQ&keywords=clean+architecture&qid=1699445781&sprefix=%2Caps%2C668&sr=8-1"
+    },
+    {
+        "name": "Clean Architecture: A Craftsman's Guide to Software Structure and Design (Robert C. Martin Series) (English Edition)",
+        "price": "R$ 105,59",
+        "link": "https://www.amazon.com.br/Clean-Architecture-Craftsmans-Software-Structure-ebook/dp/B075LRM681/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1PWHUQSSKSZFQ&keywords=clean+architecture&qid=1699445781&sprefix=%2Caps%2C668&sr=8-2"
+    },
+    {
+        "name": "Get Your Hands Dirty on Clean Architecture: A hands-on guide to creating clean web applications with code examples in Java (English Edition)",
+        "price": "R$ 80,89",
+        "link": "https://www.amazon.com.br/Hands-Dirty-Clean-Architecture-hands-ebook/dp/B07YFS3DNF/ref=sr_1_3?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1PWHUQSSKSZFQ&keywords=clean+architecture&qid=1699445781&sprefix=%2Caps%2C668&sr=8-3"
+    },
+]
+```
+
+**Exemplo de requisição com erro**
+```json
+{
+    "error": "Product name was not given"
+}
+```
